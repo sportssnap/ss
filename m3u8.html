@@ -56,21 +56,21 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
-      const streamURL = urlParams.get('streamURL');
+      const sportssnap = urlParams.get('sportssnap'); // Updated parameter name
 
-      if (streamURL) {
+      if (sportssnap) {
         const video = document.getElementById('player');
         const player = new Plyr(video);
 
         if (Hls.isSupported()) {
           const hls = new Hls();
-          hls.loadSource(streamURL);
+          hls.loadSource(sportssnap); // Updated variable name
           hls.attachMedia(video);
           hls.on(Hls.Events.MANIFEST_PARSED, () => {
             video.play();
           });
         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-          video.src = streamURL;
+          video.src = sportssnap; // Updated variable name
           video.addEventListener('loadedmetadata', () => {
             video.play();
           });
@@ -87,7 +87,7 @@
   </script>
   <br>
   
-  <!-- Top Text >
+  <!-- Top Text 
   <div class="top-text">www.sportssnap.net</div>-->
 </body>
 </html>
