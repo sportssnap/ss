@@ -11,10 +11,11 @@
     }
     .plyr__logo {
       position: absolute;
-      top: 10px;
-      left: 10px;
+      bottom: 500px;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 10;
-      width: 50px; /* Adjust the size as needed */
+      width: auto; /* Adjust the size as needed */
       height: auto;
     }
 
@@ -62,7 +63,7 @@
 
         // Add logo to the player
         const logo = document.createElement('img');
-        logo.src = 'https://i.ibb.co/wzpjWHt/Sports-Snap-circle.png'; // Replace with your logo path
+        logo.src = 'https://i.ibb.co/NsR6tsS/www-sportssnap-net-logo.png'; // Replace with your logo path
         logo.alt = 'Logo';
         logo.className = 'plyr__logo';
         document.querySelector('.plyr__video-wrapper').appendChild(logo);
